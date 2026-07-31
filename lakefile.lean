@@ -6,22 +6,22 @@ package «hex-berlekamp-zassenhaus-mathlib» where
   leanOptions := #[⟨`doc.verso, true⟩, ⟨`doc.verso.suggestions, false⟩]
 
 require HexBerlekampZassenhaus from git
-  "https://github.com/leanprover/hex-berlekamp-zassenhaus.git" @ "274cfcbf2477ef7b3004ad2fa7cc8715c19dd4dc"
+  "https://github.com/leanprover/hex-berlekamp-zassenhaus.git" @ "106a7ea1cda1bef22befa7a1c26bd9de991e69c8"
 
 require HexBerlekampMathlib from git
-  "https://github.com/leanprover/hex-berlekamp-mathlib.git" @ "61c011715549e420039b8f598fcb656745627e42"
+  "https://github.com/leanprover/hex-berlekamp-mathlib.git" @ "ea67ade6e34911b813d6e2d9636e7f44a0bbe36d"
 
 require HexHenselMathlib from git
-  "https://github.com/leanprover/hex-hensel-mathlib.git" @ "303bf387a450041237f718a4bb9f4b9fabb2e508"
+  "https://github.com/leanprover/hex-hensel-mathlib.git" @ "64093ed90fc8e698e67ef7e277290622ce83fbfe"
 
 require HexPolyZMathlib from git
-  "https://github.com/leanprover/hex-poly-z-mathlib.git" @ "04198bd58704d5339431b82519ca963162669a2d"
+  "https://github.com/leanprover/hex-poly-z-mathlib.git" @ "d9097b71aa14539fc6c501eafbc6f4f21c7dbbbf"
 
 require HexMatrixMathlib from git
-  "https://github.com/leanprover/hex-matrix-mathlib.git" @ "be15f40e4942fe78ed28f037c9407a94bc3c10ce"
+  "https://github.com/leanprover/hex-matrix-mathlib.git" @ "7b28ee80d5f372054e167b7ce0a4fe57dac90e13"
 
 require HexLLLMathlib from git
-  "https://github.com/leanprover/hex-lll-mathlib.git" @ "c10d6681dee9a4f963c1035bcbe34fc3eb60a769"
+  "https://github.com/leanprover/hex-lll-mathlib.git" @ "65645933516b49231316ba7ab4ecf887dd8254bd"
 
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4.git" @ "v4.32.2"
