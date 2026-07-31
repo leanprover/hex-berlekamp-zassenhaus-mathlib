@@ -18,4 +18,4 @@ jobs:
       - name: Fetch Mathlib cache
         run: lake exe cache get
       - name: Build library and release regressions
-        run: lake build HexBerlekampZassenhausMathlib HexBerlekampZassenhausMathlibTests
+        run: lake build HexBerlekampZassenhausMathlib HexBerlekampZassenhausMathlibModules HexBerlekampZassenhausMathlibTests

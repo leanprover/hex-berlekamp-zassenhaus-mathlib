@@ -29,5 +29,9 @@ require mathlib from git
 @[default_target]
 lean_lib HexBerlekampZassenhausMathlib
 
+@[default_target]
+lean_lib HexBerlekampZassenhausMathlibModules where
+  globs := #[`HexBerlekampZassenhausMathlib.All]
+
 lean_lib HexBerlekampZassenhausMathlibTests where
   globs := #[`HexBerlekampZassenhausMathlib.FactorPolyTests, `HexBerlekampZassenhausMathlib.IrreducibilityTests]
