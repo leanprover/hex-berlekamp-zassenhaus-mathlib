@@ -49,6 +49,10 @@ public import HexBerlekampZassenhausMathlib.Classical.CombinationIterator
 public import HexBerlekampZassenhausMathlib.Classical.SearchCompleteness
 public import HexBerlekampZassenhausMathlib.Classical.Factorization
 public import HexBerlekampZassenhausMathlib.FactorIrreducibility
+public import HexBerlekampZassenhausMathlib.SquareClass
+public import HexBerlekampZassenhausMathlib.QuadraticNorm
+public import HexBerlekampZassenhausMathlib.QuadraticNormIrreducible
+public import HexBerlekampZassenhausMathlib.Multiquadratic
 
 public section
 

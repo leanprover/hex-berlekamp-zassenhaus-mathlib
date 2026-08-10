@@ -125,6 +125,51 @@ The headline product, irreducibility, normalization, uniqueness, and
 lattice-totality theorems use only the accepted Lean and Mathlib
 foundations reported by the trust-surface check.
 
+## Quadratic norm correspondence
+
+For a commutative ring `K` and `r : K` with `r² = d`, `map_quadNorm`
+identifies the executable quadratic norm with the honest polynomial
+statement:
+
+```lean
+theorem map_quadNorm (g : Hex.ZPoly) (d : ℤ) (r : K) (hr : r ^ 2 = (d : K)) :
+  (toPolynomial (Hex.quadNorm d g)).map (algebraMap ℤ K)
+    = ((toPolynomial g).map (algebraMap ℤ K)).comp (X - C r)
+      * ((toPolynomial g).map (algebraMap ℤ K)).comp (X + C r)
+```
+
+`map_iteratedNorm` iterates it: given square roots of every radicand,
+the executable `iteratedNorm` maps to `∏_ε (X - c - ∑ᵢ εᵢ rᵢ)` over the
+`2ⁿ` sign patterns, which is the polynomial the multiquadratic tower
+theorem is about.
+
+`Hex.SquareClass.Independent` says no nonempty sublist of the radicands
+has a square product in `ℚ`, and
+`independentSquareClasses_iff` shows the executable check
+decides it. `associated_toPolynomial_of_check` carries a successful
+certificate check to an `Associated` in `Polynomial ℤ`, so the input and
+the iterated norm are irreducible together.
+
+The tower theorem is `Hex.SquareClass.irreducible_int_of_map_eq_signPoly`:
+a monic integer polynomial whose complex image is the sign-pattern
+product of independent square classes is irreducible, because it is the
+minimal polynomial of `c + ∑ᵢ √dᵢ`. It writes the product as a
+`Finset.prod` over `Fin n → Bool`, which is what lets an automorphism act
+by a reindexing equivalence; `map_iteratedNorm` writes it as a
+`List.prod` over a fold-built list, which is what the iterated norm
+computes. `signPatternPoly_ofFn` proves the two encodings are the same
+polynomial, by induction on the number of radicands, splitting the last
+sign off with `Fin.snocEquiv` on one side and the last fold step on the
+other.
+
+Composing those gives `irreducible_of_check`: a successful
+`QuadraticNormCertificate.check` makes its input irreducible in
+`Polynomial ℤ`, with no hypothesis on the input, and
+`irreducible_of_quadraticNormCertified` says the same of the production
+gate. That is what discharges the certificate arm of
+`factorClassicalFactors_factor_irreducible`, so a certified singleton is
+proved irreducible on the same footing as every other returned factor.
+
 ## Factor tactics
 
 The `Polynomial ℤ` tactic support parses a closed polynomial
