@@ -6,10 +6,10 @@ package «hex-berlekamp-zassenhaus-mathlib» where
   leanOptions := #[⟨`doc.verso, true⟩, ⟨`doc.verso.suggestions, false⟩]
 
 require HexBerlekampZassenhaus from git
-  "https://github.com/leanprover/hex-berlekamp-zassenhaus.git" @ "f368ea2a54a08d7aa7f535c044e51f5e5fca2eb4"
+  "https://github.com/leanprover/hex-berlekamp-zassenhaus.git" @ "e9dc9ff3ac18c14cd3402496ec4b8fd1ce219696"
 
 require HexBerlekampMathlib from git
-  "https://github.com/leanprover/hex-berlekamp-mathlib.git" @ "ce0cf96b454f78e8c3b3a202256bfa097dd0c55f"
+  "https://github.com/leanprover/hex-berlekamp-mathlib.git" @ "53c3c54732df1b8e419e73e031004f5a64e1bc28"
 
 require HexHenselMathlib from git
   "https://github.com/leanprover/hex-hensel-mathlib.git" @ "e3e1fe9fe5560e78ffc07a939a5a337889b9aa6c"
